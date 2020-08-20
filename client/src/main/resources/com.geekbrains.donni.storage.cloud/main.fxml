@@ -12,30 +12,53 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="800.0">
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #E6E6FA;">
          <children>
-            <SplitPane dividerPositions="0.5" layoutY="25.0" prefHeight="375.0" prefWidth="800.0">
+            <SplitPane dividerPositions="0.5" layoutY="30.0" prefHeight="375.0" prefWidth="800.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ListView fx:id="listViewServer" layoutX="14.0" layoutY="14.0" prefHeight="398.4" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TableView fx:id="tableViewServer" prefHeight="373.6" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="nameTableColumnServer" prefWidth="186.3999908566475" text="Имя" />
+                            <TableColumn fx:id="extensionTableColumnServer" prefWidth="100.59999084472656" text="Тип" />
+                              <TableColumn fx:id="sizeTableColumnServer" prefWidth="107.4000244140625" text="Размер" />
+                          </columns>
+                        </TableView>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ListView fx:id="listViewClient" layoutX="14.0" layoutY="14.0" prefHeight="398.4" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TableView fx:id="tableViewClient" prefHeight="373.6" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                              <TableColumn fx:id="nameTableColumnClient" prefWidth="174.00000303983688" text="Имя" />
+                            <TableColumn fx:id="extensionTableColumnClient" prefWidth="105.79991149902344" text="Тип" />
+                            <TableColumn fx:id="sizeColumnTableClient" minWidth="0.0" prefWidth="116.60009765625" text="Размер" />
+                          </columns>
+                        </TableView>
                      </children></AnchorPane>
               </items>
             </SplitPane>
-            <Button layoutX="14.0" layoutY="408.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" text="Download" />
-            <Button layoutX="650.0" layoutY="408.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" text="Upload" />
-            <Label layoutX="100.0" layoutY="1.0" prefHeight="25.0" prefWidth="150.0" text="Server storage" textAlignment="CENTER">
+            <Button fx:id="downloadButton" layoutX="10.0" layoutY="430.0" mnemonicParsing="false" onAction="#downloadFile" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #87CEEB;" text="Загрузить">
                <font>
-                  <Font size="16.0" />
-               </font></Label>
-            <Label layoutX="500.0" layoutY="1.0" prefHeight="25.0" prefWidth="150.0" text="Client storage" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                  <Font name="Gabriola" size="20.0" />
+               </font></Button>
+            <Button fx:id="uploadButton" layoutX="210.0" layoutY="430.0" mnemonicParsing="false" onAction="#uploadFile" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #87CEEB;" text="Отправить">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Gabriola" size="20.0" />
+               </font></Button>
+            <Label layoutX="154.0" layoutY="1.0" prefHeight="26.0" prefWidth="83.0" text="Хранилище" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
                </font></Label>
+            <Label layoutX="566.0" layoutY="1.0" prefHeight="26.0" prefWidth="83.0" text="Ваши файлы" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
+               </font></Label>
+            <Button fx:id="deleteButton" layoutX="410.0" layoutY="430.0" mnemonicParsing="false" onAction="#deleteFile" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #87CEEB;" text="Удалить">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
    </children>
 </GridPane>

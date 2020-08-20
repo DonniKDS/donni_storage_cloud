@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geekbrains.donni.storage.cloud.controllers.AuthController">
+   <children>
+      <AnchorPane layoutY="96.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #E6E6FA;">
+         <children>
+            <PasswordField fx:id="passwordField" layoutX="188.0" layoutY="119.0" prefHeight="30.0" prefWidth="350.0" />
+            <TextField fx:id="loginField" layoutX="188.0" layoutY="70.0" prefHeight="30.0" prefWidth="350.0" />
+            <Label layoutX="112.0" layoutY="70.0" text="Логин">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="119.0" text="Пароль">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="200.0" layoutY="183.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #87CEEB;" text="Войти">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="219.0" layoutY="14.0" text="Авторизация">
+               <font>
+                  <Font name="Gabriola" size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="57.0" layoutY="-4.0" prefHeight="100.0" prefWidth="486.0" text="Облачное хранилище by Donni " textAlignment="CENTER">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
